@@ -2,7 +2,7 @@
   "name": "resize-polyfill",
   "version": "1.0.0",
   "description": "Polyfill for Textarea resize handler for IE, Edge, Safari, etc",
-  "main": "index.js",
+  "main": "lib/polyfill-resize.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
