@@ -15,7 +15,7 @@ Preview
 
 How to use it
 ---
-- copy `lib/*` or `npm install resize-polyfill`
+- copy `lib/*` or `npm install --save resize-polyfill`
 - [apply Reverse engineering to demo.html :-)](/demo.html)
 
 
