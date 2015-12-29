@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Resize-polyfill</title>
+  <style type="text/css">
+    .resize-polyfill-wrapper {
+      position: relative; /* position: relative|absolute is required */
+      top: auto !important; /* override value from DragResize */
+      left: auto !important; /* override value from DragResize */
+    }
+    .demo-no-polyfill-wrapper textarea,
+    .resize-polyfill-wrapper textarea {
+      border: 1px solid #BFBFBF;
+      height: 100%;
+      width: 100%;
+    }
+
+    .resize-polyfill-br {
+      background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAALUlEQVR42mNgwAH279//H4QZyFYAAv///5fBqQurCQQVEHQMVjaMAQQc2BQAABXMU79BvB5bAAAAAElFTkSuQmCC') no-repeat center center;
+      border: 2px solid transparent;
+      bottom: 0px;
+      cursor: se-resize;
+      height: 8px;
+      position: absolute;
+      right: 0px;
+      width: 8px;
+    }
+  </style>
+
+</head>
+<body>
+  <div style="float:left; width:50%">
+    <h3>Before</h3>
+    <div class="demo-no-polyfill-wrapper"
+         style="width: 250px; height: 120px;">
+     <textarea>I am TEXTAREA.</textarea>
+    </div>
+
+    <br />
+
+    <div class="demo-no-polyfill-wrapper"
+         style="width: 250px; height: 60px; background: #B00B1E; color: #FFF">
+     I am DIV
+    </div>
+  </div>
+
+
+  <div style="float:left; width:50%">
+    <h3>After</h3>
+    <div class="resize-polyfill-wrapper"
+         style="width: 250px; height: 120px;">
+     <textarea>I am TEXTAREA.</textarea>
+    </div>
+
+    <br />
+
+    <div class="resize-polyfill-wrapper"
+         style="width: 250px; height: 60px; background: #B00B1E; color: #FFF">
+     I am DIV
+    </div>
+  </div>
+
+
+  <script type="text/javascript" src="lib/polyfill-resize.js"></script>
+  <script>
+    var el = document.getElementsByClassName('resize-polyfill-wrapper');
+    resizeHandlerPolyfill(el);
+  </script>
+</body>
+</html>
