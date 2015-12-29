@@ -4,19 +4,17 @@
   <meta charset="utf-8">
   <title>Resize-polyfill</title>
   <style type="text/css">
-    .resize-polyfill-wrapper {
+    .resize-polyfill-wrapper { /* requred */
       position: relative; /* position: relative|absolute is required */
       top: auto !important; /* override value from DragResize */
       left: auto !important; /* override value from DragResize */
     }
-    .demo-no-polyfill-wrapper textarea,
-    .resize-polyfill-wrapper textarea {
-      border: 1px solid #BFBFBF;
-      height: 100%;
+    .resize-polyfill-polyfilled textarea { /* requred */
       width: 100%;
+      height: 100%;
     }
 
-    .resize-polyfill-br {
+    .resize-polyfill-br { /* requred */
       background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAALUlEQVR42mNgwAH279//H4QZyFYAAv///5fBqQurCQQVEHQMVjaMAQQc2BQAABXMU79BvB5bAAAAAElFTkSuQmCC') no-repeat center center;
       border: 2px solid transparent;
       bottom: 0px;
@@ -26,14 +24,20 @@
       right: 0px;
       width: 8px;
     }
+
+    .demo-no-polyfill-wrapper textarea,
+    .resize-polyfill-wrapper textarea {
+      border: 1px solid #BFBFBF;
+      resize: both;
+      min-height: 50px;
+    }
   </style>
 
 </head>
 <body>
   <div style="float:left; width:50%">
     <h3>Before</h3>
-    <div class="demo-no-polyfill-wrapper"
-         style="width: 250px; height: 120px;">
+    <div class="demo-no-polyfill-wrapper">
      <textarea>I am TEXTAREA.</textarea>
     </div>
 
@@ -48,8 +52,7 @@
 
   <div style="float:left; width:50%">
     <h3>After</h3>
-    <div class="resize-polyfill-wrapper"
-         style="width: 250px; height: 120px;">
+    <div class="resize-polyfill-wrapper">
      <textarea>I am TEXTAREA.</textarea>
     </div>
 
@@ -61,11 +64,19 @@
     </div>
   </div>
 
+  <div id="info" style="background:#AFA; clear: both; border-top: 20px solid #FFF; text-align:center;">
+    Resize handler added: 
+  </div>
+
 
   <script type="text/javascript" src="lib/polyfill-resize.js"></script>
   <script>
     var el = document.getElementsByClassName('resize-polyfill-wrapper');
-    resizeHandlerPolyfill(el);
+    var method = resizeHandlerPolyfill(el);
+
+
+
+    document.getElementById('info').innerHTML += method;
   </script>
 </body>
 </html>
