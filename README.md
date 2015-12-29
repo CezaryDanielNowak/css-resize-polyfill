@@ -15,7 +15,8 @@ Preview
 
 How to use it
 ---
-[apply Reverse engineering to demo.html :-)](/demo.html)
+- copy `lib/*` or `npm install resize-polyfill`
+- [apply Reverse engineering to demo.html :-)](/demo.html)
 
 
 Why CSS Resize Polyfill is the best
