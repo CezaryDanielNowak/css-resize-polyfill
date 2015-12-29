@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <title>Resize-polyfill</title>
   <style type="text/css">
+    /* 1. copy styles marked as required */
     .resize-polyfill-wrapper { /* requred */
       position: relative; /* position: relative|absolute is required */
       top: auto !important; /* override value from DragResize */
@@ -49,7 +50,7 @@
     </div>
   </div>
 
-
+  <!-- 2. mark each textarea container with className: resize-polyfill-wrapper -->
   <div style="float:left; width:50%">
     <h3>After</h3>
     <div class="resize-polyfill-wrapper">
@@ -68,14 +69,14 @@
     Resize handler added: 
   </div>
 
-
+  <!-- 3. attach lib/polyfill-resize.js -->
   <script type="text/javascript" src="lib/polyfill-resize.js"></script>
   <script>
+    // 4. call two following lines
     var el = document.getElementsByClassName('resize-polyfill-wrapper');
     var method = resizeHandlerPolyfill(el);
 
-
-
+    // for demo purposes
     document.getElementById('info').innerHTML += method;
   </script>
 </body>

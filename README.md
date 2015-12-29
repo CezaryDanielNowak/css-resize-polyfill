@@ -11,3 +11,14 @@ Supports Internet Explorer, Edge, Firefox, Chrome, Safari etc.
 Preview
 ---
 ![Edge Preview](/assets-demo/before-after.png)
+
+
+How to use it
+---
+[apply Reverse engineering to demo.html :-)](/demo.html)
+
+
+Why CSS Resize Polyfill is the best
+---
+- There are no many alternatives. I found just [Resizable as a part of jQuery UI](https://jqueryui.com/resizable/).
+- It's really small (7.85KB uncompressed)
