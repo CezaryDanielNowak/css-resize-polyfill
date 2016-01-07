@@ -22,4 +22,4 @@ How to use it
 Why CSS Resize Polyfill is the best
 ---
 - There are no many alternatives. I found just [Resizable as a part of jQuery UI](https://jqueryui.com/resizable/).
-- It's really small (7.85KB uncompressed)
+- It's really small (9.15KB uncompressed)
