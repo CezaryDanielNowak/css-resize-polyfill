@@ -28,7 +28,7 @@ class MyComponent {
   render (
     <textarea ref={(el) => {
       if (el) {
-        resizePolyfill(el);
+        resizePolyfill(el, true);
       }
     }}>
     
