@@ -18,6 +18,24 @@ How to use it
 - copy `lib/*` or `npm install --save resize-polyfill`
 - [apply Reverse engineering to demo.html :-)](/demo.html)
 
+React integration
+---
+It's trivial to integrate with react:
+```
+import resizePolyfill from 'resize-polyfill';
+
+class MyComponent {
+  render (
+    <textarea ref={(el) => {
+      if (el) {
+        resizePolyfill(el);
+      }
+    }}>
+    
+    </textarea>
+  )
+}
+```
 
 Why CSS Resize Polyfill is the best
 ---
